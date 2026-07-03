@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌦 Weather App</h1>
+	<p style="font-size:14px;">Check real-time weather instantly 🌍</p>
+
+        <!-- 🔍 Input with Enter key support -->
+        <input 
+            type="text" 
+            id="city" 
+            placeholder="Enter city name"
+            onkeypress="if(event.key==='Enter') getWeather()"
+        >
+
+        <button onclick="getWeather()">Search</button>
+
+        <!-- 🔽 Weather Result -->
+        <div id="result"></div>
+
+        <!-- 📜 History -->
+        <h3>Search History</h3>
+        <ul id="history"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
